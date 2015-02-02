@@ -2,8 +2,8 @@
 //  PromisesTests.swift
 //  PromisesTests
 //
-//  Created by Zachary Smith on 1/29/15.
-//  Copyright (c) 2015 Scal.io. All rights reserved.
+//  Created by Zachary Smith on 2/2/15.
+//  Copyright (c) 2015 Zachary Smith. All rights reserved.
 //
 
 import UIKit

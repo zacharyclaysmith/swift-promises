@@ -7,100 +7,100 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		50C4A1001A7AEDAE0010C199 /* Promises.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C4A0FF1A7AEDAE0010C199 /* Promises.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		50C4A1061A7AEDAE0010C199 /* Promises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C4A0FA1A7AEDAE0010C199 /* Promises.framework */; };
-		50C4A10D1A7AEDAE0010C199 /* PromisesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C4A10C1A7AEDAE0010C199 /* PromisesTests.swift */; };
-		50C4A1201A7AEDCF0010C199 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C4A11F1A7AEDCF0010C199 /* Promise.swift */; };
+		5033B9B51A801B3300516627 /* Promises.h in Headers */ = {isa = PBXBuildFile; fileRef = 5033B9B41A801B3300516627 /* Promises.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5033B9BB1A801B3400516627 /* Promises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5033B9AF1A801B3300516627 /* Promises.framework */; };
+		5033B9C21A801B3400516627 /* PromisesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5033B9C11A801B3400516627 /* PromisesTests.swift */; };
+		5033B9CC1A801BC100516627 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5033B9CB1A801BC100516627 /* Promise.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		50C4A1071A7AEDAE0010C199 /* PBXContainerItemProxy */ = {
+		5033B9BC1A801B3400516627 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 50C4A0F11A7AEDAE0010C199 /* Project object */;
+			containerPortal = 5033B9A61A801B3300516627 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 50C4A0F91A7AEDAE0010C199;
+			remoteGlobalIDString = 5033B9AE1A801B3300516627;
 			remoteInfo = Promises;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		50C4A0FA1A7AEDAE0010C199 /* Promises.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Promises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		50C4A0FE1A7AEDAE0010C199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		50C4A0FF1A7AEDAE0010C199 /* Promises.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Promises.h; sourceTree = "<group>"; };
-		50C4A1051A7AEDAE0010C199 /* PromisesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PromisesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		50C4A10B1A7AEDAE0010C199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		50C4A10C1A7AEDAE0010C199 /* PromisesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromisesTests.swift; sourceTree = "<group>"; };
-		50C4A11F1A7AEDCF0010C199 /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
+		5033B9AF1A801B3300516627 /* Promises.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Promises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5033B9B31A801B3300516627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5033B9B41A801B3300516627 /* Promises.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Promises.h; sourceTree = "<group>"; };
+		5033B9BA1A801B3400516627 /* PromisesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PromisesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5033B9C01A801B3400516627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5033B9C11A801B3400516627 /* PromisesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromisesTests.swift; sourceTree = "<group>"; };
+		5033B9CB1A801BC100516627 /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		50C4A0F61A7AEDAE0010C199 /* Frameworks */ = {
+		5033B9AB1A801B3300516627 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		50C4A1021A7AEDAE0010C199 /* Frameworks */ = {
+		5033B9B71A801B3400516627 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50C4A1061A7AEDAE0010C199 /* Promises.framework in Frameworks */,
+				5033B9BB1A801B3400516627 /* Promises.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		50C4A0F01A7AEDAE0010C199 = {
+		5033B9A51A801B3300516627 = {
 			isa = PBXGroup;
 			children = (
-				50C4A0FC1A7AEDAE0010C199 /* Promises */,
-				50C4A1091A7AEDAE0010C199 /* PromisesTests */,
-				50C4A0FB1A7AEDAE0010C199 /* Products */,
+				5033B9B11A801B3300516627 /* Promises */,
+				5033B9BE1A801B3400516627 /* PromisesTests */,
+				5033B9B01A801B3300516627 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		50C4A0FB1A7AEDAE0010C199 /* Products */ = {
+		5033B9B01A801B3300516627 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				50C4A0FA1A7AEDAE0010C199 /* Promises.framework */,
-				50C4A1051A7AEDAE0010C199 /* PromisesTests.xctest */,
+				5033B9AF1A801B3300516627 /* Promises.framework */,
+				5033B9BA1A801B3400516627 /* PromisesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		50C4A0FC1A7AEDAE0010C199 /* Promises */ = {
+		5033B9B11A801B3300516627 /* Promises */ = {
 			isa = PBXGroup;
 			children = (
-				50C4A11F1A7AEDCF0010C199 /* Promise.swift */,
-				50C4A0FF1A7AEDAE0010C199 /* Promises.h */,
-				50C4A0FD1A7AEDAE0010C199 /* Supporting Files */,
+				5033B9CB1A801BC100516627 /* Promise.swift */,
+				5033B9B41A801B3300516627 /* Promises.h */,
+				5033B9B21A801B3300516627 /* Supporting Files */,
 			);
 			path = Promises;
 			sourceTree = "<group>";
 		};
-		50C4A0FD1A7AEDAE0010C199 /* Supporting Files */ = {
+		5033B9B21A801B3300516627 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				50C4A0FE1A7AEDAE0010C199 /* Info.plist */,
+				5033B9B31A801B3300516627 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		50C4A1091A7AEDAE0010C199 /* PromisesTests */ = {
+		5033B9BE1A801B3400516627 /* PromisesTests */ = {
 			isa = PBXGroup;
 			children = (
-				50C4A10C1A7AEDAE0010C199 /* PromisesTests.swift */,
-				50C4A10A1A7AEDAE0010C199 /* Supporting Files */,
+				5033B9C11A801B3400516627 /* PromisesTests.swift */,
+				5033B9BF1A801B3400516627 /* Supporting Files */,
 			);
 			path = PromisesTests;
 			sourceTree = "<group>";
 		};
-		50C4A10A1A7AEDAE0010C199 /* Supporting Files */ = {
+		5033B9BF1A801B3400516627 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				50C4A10B1A7AEDAE0010C199 /* Info.plist */,
+				5033B9C01A801B3400516627 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -108,25 +108,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		50C4A0F71A7AEDAE0010C199 /* Headers */ = {
+		5033B9AC1A801B3300516627 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50C4A1001A7AEDAE0010C199 /* Promises.h in Headers */,
+				5033B9B51A801B3300516627 /* Promises.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		50C4A0F91A7AEDAE0010C199 /* Promises */ = {
+		5033B9AE1A801B3300516627 /* Promises */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 50C4A1101A7AEDAE0010C199 /* Build configuration list for PBXNativeTarget "Promises" */;
+			buildConfigurationList = 5033B9C51A801B3400516627 /* Build configuration list for PBXNativeTarget "Promises" */;
 			buildPhases = (
-				50C4A0F51A7AEDAE0010C199 /* Sources */,
-				50C4A0F61A7AEDAE0010C199 /* Frameworks */,
-				50C4A0F71A7AEDAE0010C199 /* Headers */,
-				50C4A0F81A7AEDAE0010C199 /* Resources */,
+				5033B9AA1A801B3300516627 /* Sources */,
+				5033B9AB1A801B3300516627 /* Frameworks */,
+				5033B9AC1A801B3300516627 /* Headers */,
+				5033B9AD1A801B3300516627 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -134,71 +134,71 @@
 			);
 			name = Promises;
 			productName = Promises;
-			productReference = 50C4A0FA1A7AEDAE0010C199 /* Promises.framework */;
+			productReference = 5033B9AF1A801B3300516627 /* Promises.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		50C4A1041A7AEDAE0010C199 /* PromisesTests */ = {
+		5033B9B91A801B3400516627 /* PromisesTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 50C4A1131A7AEDAE0010C199 /* Build configuration list for PBXNativeTarget "PromisesTests" */;
+			buildConfigurationList = 5033B9C81A801B3400516627 /* Build configuration list for PBXNativeTarget "PromisesTests" */;
 			buildPhases = (
-				50C4A1011A7AEDAE0010C199 /* Sources */,
-				50C4A1021A7AEDAE0010C199 /* Frameworks */,
-				50C4A1031A7AEDAE0010C199 /* Resources */,
+				5033B9B61A801B3400516627 /* Sources */,
+				5033B9B71A801B3400516627 /* Frameworks */,
+				5033B9B81A801B3400516627 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				50C4A1081A7AEDAE0010C199 /* PBXTargetDependency */,
+				5033B9BD1A801B3400516627 /* PBXTargetDependency */,
 			);
 			name = PromisesTests;
 			productName = PromisesTests;
-			productReference = 50C4A1051A7AEDAE0010C199 /* PromisesTests.xctest */;
+			productReference = 5033B9BA1A801B3400516627 /* PromisesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		50C4A0F11A7AEDAE0010C199 /* Project object */ = {
+		5033B9A61A801B3300516627 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
-				ORGANIZATIONNAME = Scal.io;
+				ORGANIZATIONNAME = "Zachary Smith";
 				TargetAttributes = {
-					50C4A0F91A7AEDAE0010C199 = {
+					5033B9AE1A801B3300516627 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
-					50C4A1041A7AEDAE0010C199 = {
+					5033B9B91A801B3400516627 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
 				};
 			};
-			buildConfigurationList = 50C4A0F41A7AEDAE0010C199 /* Build configuration list for PBXProject "Promises" */;
+			buildConfigurationList = 5033B9A91A801B3300516627 /* Build configuration list for PBXProject "Promises" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 50C4A0F01A7AEDAE0010C199;
-			productRefGroup = 50C4A0FB1A7AEDAE0010C199 /* Products */;
+			mainGroup = 5033B9A51A801B3300516627;
+			productRefGroup = 5033B9B01A801B3300516627 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				50C4A0F91A7AEDAE0010C199 /* Promises */,
-				50C4A1041A7AEDAE0010C199 /* PromisesTests */,
+				5033B9AE1A801B3300516627 /* Promises */,
+				5033B9B91A801B3400516627 /* PromisesTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		50C4A0F81A7AEDAE0010C199 /* Resources */ = {
+		5033B9AD1A801B3300516627 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		50C4A1031A7AEDAE0010C199 /* Resources */ = {
+		5033B9B81A801B3400516627 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -208,34 +208,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		50C4A0F51A7AEDAE0010C199 /* Sources */ = {
+		5033B9AA1A801B3300516627 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50C4A1201A7AEDCF0010C199 /* Promise.swift in Sources */,
+				5033B9CC1A801BC100516627 /* Promise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		50C4A1011A7AEDAE0010C199 /* Sources */ = {
+		5033B9B61A801B3400516627 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50C4A10D1A7AEDAE0010C199 /* PromisesTests.swift in Sources */,
+				5033B9C21A801B3400516627 /* PromisesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		50C4A1081A7AEDAE0010C199 /* PBXTargetDependency */ = {
+		5033B9BD1A801B3400516627 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 50C4A0F91A7AEDAE0010C199 /* Promises */;
-			targetProxy = 50C4A1071A7AEDAE0010C199 /* PBXContainerItemProxy */;
+			target = 5033B9AE1A801B3300516627 /* Promises */;
+			targetProxy = 5033B9BC1A801B3400516627 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		50C4A10E1A7AEDAE0010C199 /* Debug */ = {
+		5033B9C31A801B3400516627 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -281,7 +281,7 @@
 			};
 			name = Debug;
 		};
-		50C4A10F1A7AEDAE0010C199 /* Release */ = {
+		5033B9C41A801B3400516627 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -320,7 +320,7 @@
 			};
 			name = Release;
 		};
-		50C4A1111A7AEDAE0010C199 /* Debug */ = {
+		5033B9C61A801B3400516627 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEFINES_MODULE = YES;
@@ -328,14 +328,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Promises/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				INSTALL_PATH = /;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		50C4A1121A7AEDAE0010C199 /* Release */ = {
+		5033B9C71A801B3400516627 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEFINES_MODULE = YES;
@@ -343,14 +343,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Promises/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				INSTALL_PATH = /;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		50C4A1141A7AEDAE0010C199 /* Debug */ = {
+		5033B9C91A801B3400516627 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -367,7 +367,7 @@
 			};
 			name = Debug;
 		};
-		50C4A1151A7AEDAE0010C199 /* Release */ = {
+		5033B9CA1A801B3400516627 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -383,32 +383,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		50C4A0F41A7AEDAE0010C199 /* Build configuration list for PBXProject "Promises" */ = {
+		5033B9A91A801B3300516627 /* Build configuration list for PBXProject "Promises" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				50C4A10E1A7AEDAE0010C199 /* Debug */,
-				50C4A10F1A7AEDAE0010C199 /* Release */,
+				5033B9C31A801B3400516627 /* Debug */,
+				5033B9C41A801B3400516627 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		50C4A1101A7AEDAE0010C199 /* Build configuration list for PBXNativeTarget "Promises" */ = {
+		5033B9C51A801B3400516627 /* Build configuration list for PBXNativeTarget "Promises" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				50C4A1111A7AEDAE0010C199 /* Debug */,
-				50C4A1121A7AEDAE0010C199 /* Release */,
+				5033B9C61A801B3400516627 /* Debug */,
+				5033B9C71A801B3400516627 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		50C4A1131A7AEDAE0010C199 /* Build configuration list for PBXNativeTarget "PromisesTests" */ = {
+		5033B9C81A801B3400516627 /* Build configuration list for PBXNativeTarget "PromisesTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				50C4A1141A7AEDAE0010C199 /* Debug */,
-				50C4A1151A7AEDAE0010C199 /* Release */,
+				5033B9C91A801B3400516627 /* Debug */,
+				5033B9CA1A801B3400516627 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 50C4A0F11A7AEDAE0010C199 /* Project object */;
+	rootObject = 5033B9A61A801B3300516627 /* Project object */;
 }
