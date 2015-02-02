@@ -26,13 +26,13 @@
 
 import Foundation
 
-protocol Finishable {
+public protocol Finishable {
     func done(done: (() -> ())) -> ()
 }
 
-class Promise : Finishable {
+public class Promise<T:Any> : Finishable {
     // An array of callbacks (Void -> Void) to iterate through at resolve time.
-    var pending: (() -> ())[] = []
+    var pending: [((T?) -> ())] = []
     
     // A callback to call when we're completely done.
     var done: (() -> ()) = {}
@@ -41,11 +41,11 @@ class Promise : Finishable {
     var fail: (() -> ()) = {}
     
     // A simple way to track rejection.
-    var rejected: Bool = false
+    var error: String? = nil
     
     // Class ("static") method to return a new promise.
-    class func defer() -> Promise {
-        return Promise()
+    public class func defer() -> Promise<T> {
+        return Promise<T>()
     }
     
     // Resolve method.
@@ -54,59 +54,57 @@ class Promise : Finishable {
     // invoking each in sequence.
     //
     // Invokes fail callback in case of rejection (and swiftly abandons ship).
-    func resolve() -> (() -> ()) {
-        func resolve() -> () {
-            for f in self.pending {
-                if self.rejected {
-                    fail()
-                    return
-                }
-                f()
-            }
-            if self.rejected {
+    public func resolve(result:T? = nil) -> Void {
+        for f in self.pending {
+            if self.error != nil {
                 fail()
                 return
             }
-            done()
+            f(result?)
         }
-        return resolve
+        if self.error != nil {
+            fail()
+            return
+        }
+        
+        done()
     }
     
     // Reject method.
     //
     // Sets rejection flag to true to halt execution of subsequent callbacks.
-    func reject() -> () {
-        self.rejected = true
+    public func reject(error:String) -> () {
+        self.error = error
     }
     
     // Then method.
     //
     // This lets us chain callbacks together; it accepts one parameter, a Void -> Void
     // callback - can either be a function itself, or a Swift closure.
-    func then(callback: (() -> ())) -> Promise {
+    public func then(callback: ((T?) -> Void)) -> Promise {
         self.pending.append(callback)
         return self
     }
     
-    // Then method override.
-    //
-    // This also lets us chain callbacks together; it accepts one parameter,
-    // but unlike the previous implementation of then(), it accepts a Promise -> Void
-    // callback (which can either be a function itself, or a Swift closure).
-    //
-    // This method then wraps that callback in a Void -> Void callback that
-    // passes in this Promise object when invoking the callback() function.
-    //
-    // This allows users of our Promise library to have access to the Promise object,
-    // so that they can reject a Promise within their then() clauses. Not the cleanest
-    // way, but hey, this whole thing is a proof of concept, right? :)
-    func then(callback: ((promise: Promise) -> ())) -> Promise {
-        func thenWrapper() -> () {
-            callback(promise: self)
-        }
-        self.pending.append(thenWrapper)
-        return self
-    }
+//    // Then method override.
+//    //
+//    // This also lets us chain callbacks together; it accepts one parameter,
+//    // but unlike the previous implementation of then(), it accepts a Promise -> Void
+//    // callback (which can either be a function itself, or a Swift closure).
+//    //
+//    // This method then wraps that callback in a Void -> Void callback that
+//    // passes in this Promise object when invoking the callback() function.
+//    //
+//    // This allows users of our Promise library to have access to the Promise object,
+//    // so that they can reject a Promise within their then() clauses. Not the cleanest
+//    // way, but hey, this whole thing is a proof of concept, right? :)
+//    func then(callback: ((promise: Promise) -> ())) -> Promise {
+//        func thenWrapper() -> () {
+//            callback(promise: self)
+//        }
+//        self.pending.append(thenWrapper)
+//        return self
+//    }
     
     // Fail method.
     //
@@ -119,7 +117,7 @@ class Promise : Finishable {
     //
     // promise.then({}).fail({}).then({}).fail({})
     //
-    func fail(fail: (() -> ())) -> Finishable {
+    public func fail(fail: (() -> ())) -> Finishable {
         self.fail = fail
         let finishablePromise : Finishable = self
         return finishablePromise
@@ -129,7 +127,7 @@ class Promise : Finishable {
     //
     // This lets us specify a done() callback to be invoked at the end of a set
     // of then() clauses (provided the promise hasn't been rejected).
-    func done(done: (() -> ())) -> () {
+    public func done(done: (() -> ())) -> () {
         self.done = done
     }
 }

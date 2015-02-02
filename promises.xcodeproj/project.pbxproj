@@ -7,197 +7,198 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9B02A4AA19425AC800F9AA3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B02A4A919425AC800F9AA3B /* AppDelegate.swift */; };
-		9B02A4AC19425AC800F9AA3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B02A4AB19425AC800F9AA3B /* ViewController.swift */; };
-		9B02A4AF19425AC800F9AA3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B02A4AD19425AC800F9AA3B /* Main.storyboard */; };
-		9B02A4B119425AC800F9AA3B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B02A4B019425AC800F9AA3B /* Images.xcassets */; };
-		9B02A4BD19425AC900F9AA3B /* promisesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B02A4BC19425AC900F9AA3B /* promisesTests.swift */; };
-		9B02A4C719425ADF00F9AA3B /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B02A4C619425ADF00F9AA3B /* Promise.swift */; };
+		50C4A1001A7AEDAE0010C199 /* Promises.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C4A0FF1A7AEDAE0010C199 /* Promises.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C4A1061A7AEDAE0010C199 /* Promises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C4A0FA1A7AEDAE0010C199 /* Promises.framework */; };
+		50C4A10D1A7AEDAE0010C199 /* PromisesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C4A10C1A7AEDAE0010C199 /* PromisesTests.swift */; };
+		50C4A1201A7AEDCF0010C199 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C4A11F1A7AEDCF0010C199 /* Promise.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9B02A4B719425AC900F9AA3B /* PBXContainerItemProxy */ = {
+		50C4A1071A7AEDAE0010C199 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9B02A49C19425AC800F9AA3B /* Project object */;
+			containerPortal = 50C4A0F11A7AEDAE0010C199 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9B02A4A319425AC800F9AA3B;
-			remoteInfo = promises;
+			remoteGlobalIDString = 50C4A0F91A7AEDAE0010C199;
+			remoteInfo = Promises;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9B02A4A419425AC800F9AA3B /* promises.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = promises.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B02A4A819425AC800F9AA3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9B02A4A919425AC800F9AA3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9B02A4AB19425AC800F9AA3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9B02A4AE19425AC800F9AA3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9B02A4B019425AC800F9AA3B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		9B02A4B619425AC900F9AA3B /* promisesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = promisesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B02A4BB19425AC900F9AA3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9B02A4BC19425AC900F9AA3B /* promisesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = promisesTests.swift; sourceTree = "<group>"; };
-		9B02A4C619425ADF00F9AA3B /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
+		50C4A0FA1A7AEDAE0010C199 /* Promises.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Promises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50C4A0FE1A7AEDAE0010C199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50C4A0FF1A7AEDAE0010C199 /* Promises.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Promises.h; sourceTree = "<group>"; };
+		50C4A1051A7AEDAE0010C199 /* PromisesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PromisesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		50C4A10B1A7AEDAE0010C199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50C4A10C1A7AEDAE0010C199 /* PromisesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromisesTests.swift; sourceTree = "<group>"; };
+		50C4A11F1A7AEDCF0010C199 /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9B02A4A119425AC800F9AA3B /* Frameworks */ = {
+		50C4A0F61A7AEDAE0010C199 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9B02A4B319425AC900F9AA3B /* Frameworks */ = {
+		50C4A1021A7AEDAE0010C199 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50C4A1061A7AEDAE0010C199 /* Promises.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9B02A49B19425AC800F9AA3B = {
+		50C4A0F01A7AEDAE0010C199 = {
 			isa = PBXGroup;
 			children = (
-				9B02A4A619425AC800F9AA3B /* promises */,
-				9B02A4B919425AC900F9AA3B /* promisesTests */,
-				9B02A4A519425AC800F9AA3B /* Products */,
+				50C4A0FC1A7AEDAE0010C199 /* Promises */,
+				50C4A1091A7AEDAE0010C199 /* PromisesTests */,
+				50C4A0FB1A7AEDAE0010C199 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		9B02A4A519425AC800F9AA3B /* Products */ = {
+		50C4A0FB1A7AEDAE0010C199 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9B02A4A419425AC800F9AA3B /* promises.app */,
-				9B02A4B619425AC900F9AA3B /* promisesTests.xctest */,
+				50C4A0FA1A7AEDAE0010C199 /* Promises.framework */,
+				50C4A1051A7AEDAE0010C199 /* PromisesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9B02A4A619425AC800F9AA3B /* promises */ = {
+		50C4A0FC1A7AEDAE0010C199 /* Promises */ = {
 			isa = PBXGroup;
 			children = (
-				9B02A4A919425AC800F9AA3B /* AppDelegate.swift */,
-				9B02A4AB19425AC800F9AA3B /* ViewController.swift */,
-				9B02A4C619425ADF00F9AA3B /* Promise.swift */,
-				9B02A4AD19425AC800F9AA3B /* Main.storyboard */,
-				9B02A4B019425AC800F9AA3B /* Images.xcassets */,
-				9B02A4A719425AC800F9AA3B /* Supporting Files */,
+				50C4A11F1A7AEDCF0010C199 /* Promise.swift */,
+				50C4A0FF1A7AEDAE0010C199 /* Promises.h */,
+				50C4A0FD1A7AEDAE0010C199 /* Supporting Files */,
 			);
-			path = promises;
+			path = Promises;
 			sourceTree = "<group>";
 		};
-		9B02A4A719425AC800F9AA3B /* Supporting Files */ = {
+		50C4A0FD1A7AEDAE0010C199 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9B02A4A819425AC800F9AA3B /* Info.plist */,
+				50C4A0FE1A7AEDAE0010C199 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9B02A4B919425AC900F9AA3B /* promisesTests */ = {
+		50C4A1091A7AEDAE0010C199 /* PromisesTests */ = {
 			isa = PBXGroup;
 			children = (
-				9B02A4BC19425AC900F9AA3B /* promisesTests.swift */,
-				9B02A4BA19425AC900F9AA3B /* Supporting Files */,
+				50C4A10C1A7AEDAE0010C199 /* PromisesTests.swift */,
+				50C4A10A1A7AEDAE0010C199 /* Supporting Files */,
 			);
-			path = promisesTests;
+			path = PromisesTests;
 			sourceTree = "<group>";
 		};
-		9B02A4BA19425AC900F9AA3B /* Supporting Files */ = {
+		50C4A10A1A7AEDAE0010C199 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9B02A4BB19425AC900F9AA3B /* Info.plist */,
+				50C4A10B1A7AEDAE0010C199 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
-/* Begin PBXNativeTarget section */
-		9B02A4A319425AC800F9AA3B /* promises */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9B02A4C019425AC900F9AA3B /* Build configuration list for PBXNativeTarget "promises" */;
-			buildPhases = (
-				9B02A4A019425AC800F9AA3B /* Sources */,
-				9B02A4A119425AC800F9AA3B /* Frameworks */,
-				9B02A4A219425AC800F9AA3B /* Resources */,
+/* Begin PBXHeadersBuildPhase section */
+		50C4A0F71A7AEDAE0010C199 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50C4A1001A7AEDAE0010C199 /* Promises.h in Headers */,
 			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = promises;
-			productName = promises;
-			productReference = 9B02A4A419425AC800F9AA3B /* promises.app */;
-			productType = "com.apple.product-type.application";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9B02A4B519425AC900F9AA3B /* promisesTests */ = {
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		50C4A0F91A7AEDAE0010C199 /* Promises */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9B02A4C319425AC900F9AA3B /* Build configuration list for PBXNativeTarget "promisesTests" */;
+			buildConfigurationList = 50C4A1101A7AEDAE0010C199 /* Build configuration list for PBXNativeTarget "Promises" */;
 			buildPhases = (
-				9B02A4B219425AC900F9AA3B /* Sources */,
-				9B02A4B319425AC900F9AA3B /* Frameworks */,
-				9B02A4B419425AC900F9AA3B /* Resources */,
+				50C4A0F51A7AEDAE0010C199 /* Sources */,
+				50C4A0F61A7AEDAE0010C199 /* Frameworks */,
+				50C4A0F71A7AEDAE0010C199 /* Headers */,
+				50C4A0F81A7AEDAE0010C199 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9B02A4B819425AC900F9AA3B /* PBXTargetDependency */,
 			);
-			name = promisesTests;
-			productName = promisesTests;
-			productReference = 9B02A4B619425AC900F9AA3B /* promisesTests.xctest */;
+			name = Promises;
+			productName = Promises;
+			productReference = 50C4A0FA1A7AEDAE0010C199 /* Promises.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		50C4A1041A7AEDAE0010C199 /* PromisesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50C4A1131A7AEDAE0010C199 /* Build configuration list for PBXNativeTarget "PromisesTests" */;
+			buildPhases = (
+				50C4A1011A7AEDAE0010C199 /* Sources */,
+				50C4A1021A7AEDAE0010C199 /* Frameworks */,
+				50C4A1031A7AEDAE0010C199 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50C4A1081A7AEDAE0010C199 /* PBXTargetDependency */,
+			);
+			name = PromisesTests;
+			productName = PromisesTests;
+			productReference = 50C4A1051A7AEDAE0010C199 /* PromisesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9B02A49C19425AC800F9AA3B /* Project object */ = {
+		50C4A0F11A7AEDAE0010C199 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
-				ORGANIZATIONNAME = Ringham;
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Scal.io;
 				TargetAttributes = {
-					9B02A4A319425AC800F9AA3B = {
-						CreatedOnToolsVersion = 6.0;
+					50C4A0F91A7AEDAE0010C199 = {
+						CreatedOnToolsVersion = 6.1.1;
 					};
-					9B02A4B519425AC900F9AA3B = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = 9B02A4A319425AC800F9AA3B;
+					50C4A1041A7AEDAE0010C199 = {
+						CreatedOnToolsVersion = 6.1.1;
 					};
 				};
 			};
-			buildConfigurationList = 9B02A49F19425AC800F9AA3B /* Build configuration list for PBXProject "promises" */;
+			buildConfigurationList = 50C4A0F41A7AEDAE0010C199 /* Build configuration list for PBXProject "Promises" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
-			mainGroup = 9B02A49B19425AC800F9AA3B;
-			productRefGroup = 9B02A4A519425AC800F9AA3B /* Products */;
+			mainGroup = 50C4A0F01A7AEDAE0010C199;
+			productRefGroup = 50C4A0FB1A7AEDAE0010C199 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9B02A4A319425AC800F9AA3B /* promises */,
-				9B02A4B519425AC900F9AA3B /* promisesTests */,
+				50C4A0F91A7AEDAE0010C199 /* Promises */,
+				50C4A1041A7AEDAE0010C199 /* PromisesTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9B02A4A219425AC800F9AA3B /* Resources */ = {
+		50C4A0F81A7AEDAE0010C199 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B02A4AF19425AC800F9AA3B /* Main.storyboard in Resources */,
-				9B02A4B119425AC800F9AA3B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9B02A4B419425AC900F9AA3B /* Resources */ = {
+		50C4A1031A7AEDAE0010C199 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -207,47 +208,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9B02A4A019425AC800F9AA3B /* Sources */ = {
+		50C4A0F51A7AEDAE0010C199 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B02A4AC19425AC800F9AA3B /* ViewController.swift in Sources */,
-				9B02A4AA19425AC800F9AA3B /* AppDelegate.swift in Sources */,
-				9B02A4C719425ADF00F9AA3B /* Promise.swift in Sources */,
+				50C4A1201A7AEDCF0010C199 /* Promise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9B02A4B219425AC900F9AA3B /* Sources */ = {
+		50C4A1011A7AEDAE0010C199 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B02A4BD19425AC900F9AA3B /* promisesTests.swift in Sources */,
+				50C4A10D1A7AEDAE0010C199 /* PromisesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9B02A4B819425AC900F9AA3B /* PBXTargetDependency */ = {
+		50C4A1081A7AEDAE0010C199 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9B02A4A319425AC800F9AA3B /* promises */;
-			targetProxy = 9B02A4B719425AC900F9AA3B /* PBXContainerItemProxy */;
+			target = 50C4A0F91A7AEDAE0010C199 /* Promises */;
+			targetProxy = 50C4A1071A7AEDAE0010C199 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		9B02A4AD19425AC800F9AA3B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9B02A4AE19425AC800F9AA3B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		9B02A4BE19425AC900F9AA3B /* Debug */ = {
+		50C4A10E1A7AEDAE0010C199 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -266,6 +254,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -281,16 +270,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				METAL_ENABLE_DEBUG_INFO = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		9B02A4BF19425AC900F9AA3B /* Release */ = {
+		50C4A10F1A7AEDAE0010C199 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -309,6 +300,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -318,40 +310,49 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				METAL_ENABLE_DEBUG_INFO = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		9B02A4C119425AC900F9AA3B /* Debug */ = {
+		50C4A1111A7AEDAE0010C199 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				INFOPLIST_FILE = promises/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Promises/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		9B02A4C219425AC900F9AA3B /* Release */ = {
+		50C4A1121A7AEDAE0010C199 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				INFOPLIST_FILE = promises/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Promises/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		9B02A4C419425AC900F9AA3B /* Debug */ = {
+		50C4A1141A7AEDAE0010C199 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/promises.app/promises";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -360,61 +361,54 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = promisesTests/Info.plist;
+				INFOPLIST_FILE = PromisesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
 		};
-		9B02A4C519425AC900F9AA3B /* Release */ = {
+		50C4A1151A7AEDAE0010C199 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/promises.app/promises";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = promisesTests/Info.plist;
+				INFOPLIST_FILE = PromisesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9B02A49F19425AC800F9AA3B /* Build configuration list for PBXProject "promises" */ = {
+		50C4A0F41A7AEDAE0010C199 /* Build configuration list for PBXProject "Promises" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9B02A4BE19425AC900F9AA3B /* Debug */,
-				9B02A4BF19425AC900F9AA3B /* Release */,
+				50C4A10E1A7AEDAE0010C199 /* Debug */,
+				50C4A10F1A7AEDAE0010C199 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9B02A4C019425AC900F9AA3B /* Build configuration list for PBXNativeTarget "promises" */ = {
+		50C4A1101A7AEDAE0010C199 /* Build configuration list for PBXNativeTarget "Promises" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9B02A4C119425AC900F9AA3B /* Debug */,
-				9B02A4C219425AC900F9AA3B /* Release */,
+				50C4A1111A7AEDAE0010C199 /* Debug */,
+				50C4A1121A7AEDAE0010C199 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		9B02A4C319425AC900F9AA3B /* Build configuration list for PBXNativeTarget "promisesTests" */ = {
+		50C4A1131A7AEDAE0010C199 /* Build configuration list for PBXNativeTarget "PromisesTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9B02A4C419425AC900F9AA3B /* Debug */,
-				9B02A4C519425AC900F9AA3B /* Release */,
+				50C4A1141A7AEDAE0010C199 /* Debug */,
+				50C4A1151A7AEDAE0010C199 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 9B02A49C19425AC800F9AA3B /* Project object */;
+	rootObject = 50C4A0F11A7AEDAE0010C199 /* Project object */;
 }

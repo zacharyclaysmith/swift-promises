@@ -1,14 +1,15 @@
 //
-//  promisesTests.swift
-//  promisesTests
+//  PromisesTests.swift
+//  PromisesTests
 //
-//  Created by Rob Ringham on 6/6/14.
-//  Copyright (c) 2014 Ringham. All rights reserved.
+//  Created by Zachary Smith on 1/29/15.
+//  Copyright (c) 2015 Scal.io. All rights reserved.
 //
 
+import UIKit
 import XCTest
 
-class promisesTests: XCTestCase {
+class PromisesTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
