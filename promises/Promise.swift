@@ -26,11 +26,22 @@
 
 import Foundation
 
+public enum PromiseStatus{
+    case Unresolved
+    case Resolving
+    case Resolved
+    case Failed
+}
+
 public protocol Finishable {
     func done(done: (() -> ())) -> ()
 }
 
 public class Promise<T:Any> : Finishable {
+    private var _status = PromiseStatus.Unresolved
+    
+    private var _result:T? = nil
+    
     // An array of callbacks (Void -> Void) to iterate through at resolve time.
     var pending: [((T?) -> ())] = []
     
@@ -55,16 +66,16 @@ public class Promise<T:Any> : Finishable {
     //
     // Invokes fail callback in case of rejection (and swiftly abandons ship).
     public func resolve(result:T? = nil) -> Void {
+        assert(_status == .Unresolved, "Promise has already been resolved or rejected.")
+        
+        _result = result
+        
+        _status = .Resolving
+        
         for f in self.pending {
-            if self.error != nil {
-                fail()
-                return
-            }
+            
+            _status = .Resolved
             f(result?)
-        }
-        if self.error != nil {
-            fail()
-            return
         }
         
         done()
@@ -74,6 +85,9 @@ public class Promise<T:Any> : Finishable {
     //
     // Sets rejection flag to true to halt execution of subsequent callbacks.
     public func reject(error:String) -> () {
+        assert(_status == .Unresolved, "Promise has already been resolved or rejected.")
+        
+        _status = .Failed
         self.error = error
     }
     
@@ -82,7 +96,13 @@ public class Promise<T:Any> : Finishable {
     // This lets us chain callbacks together; it accepts one parameter, a Void -> Void
     // callback - can either be a function itself, or a Swift closure.
     public func then(callback: ((T?) -> Void)) -> Promise {
-        self.pending.append(callback)
+        if(_status == .Unresolved){
+            self.pending.append(callback)
+        }else if(_status == .Resolved || _status == .Resolving){
+            //EXPL: call any thens set *after* the promise is resolved.
+            callback(_result)
+        }
+        
         return self
     }
     
