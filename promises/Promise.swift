@@ -73,10 +73,12 @@ public class Promise<T:Any> : Finishable {
         _status = .Resolving
         
         for f in self.pending {
+            if(_status == .Failed){break} //EXPL: If it's rejected, halt callbacks.
             
-            _status = .Resolved
             f(result?)
         }
+        
+        _status = .Resolved
         
         done()
     }
@@ -85,10 +87,12 @@ public class Promise<T:Any> : Finishable {
     //
     // Sets rejection flag to true to halt execution of subsequent callbacks.
     public func reject(error:String) -> () {
-        assert(_status == .Unresolved, "Promise has already been resolved or rejected.")
+        assert(_status == .Unresolved || _status == .Resolving, "Promise has already been resolved or rejected.")
         
         _status = .Failed
         self.error = error
+        
+        self.fail()
     }
     
     // Then method.
