@@ -139,8 +139,13 @@ public class Promise<T:Any> : Finishable {
     //
     public func fail(fail: (() -> ())) -> Finishable {
         self.fail = fail
-        let finishablePromise : Finishable = self
-        return finishablePromise
+        
+        //EXPL: if the promise has already failed, make the call anyway.
+        if(_status == .Failed){
+            fail()
+        }
+        
+        return self
     }
     
     // Done method.
