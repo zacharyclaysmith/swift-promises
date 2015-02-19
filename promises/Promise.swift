@@ -40,6 +40,10 @@ public class Promise<T:Any> {
     private var _thens: [((result:T?) -> ())] = []
     private var _fails: [(error:String) -> Void] = []
     
+    public init(){
+        
+    }
+    
     // Resolve method.
     //
     // Returns a resolve function that loops through pending callbacks,
