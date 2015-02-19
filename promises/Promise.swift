@@ -26,38 +26,19 @@
 
 import Foundation
 
-public enum PromiseStatus{
-    case Unresolved
-    case Resolving
-    case Resolved
-    case Failed
+internal enum Status{
+    case Pending
+    case Fulfilled
+    case Rejected
 }
 
-public protocol Finishable {
-    func done(done: (() -> ())) -> ()
-}
-
-public class Promise<T:Any> : Finishable {
-    private var _status = PromiseStatus.Unresolved
-    
+public class Promise<T:Any> {
+    private var _status:Status = .Pending
     private var _result:T? = nil
+    private var _error: String = ""
     
-    // An array of callbacks (Void -> Void) to iterate through at resolve time.
-    var pending: [((T?) -> ())] = []
-    
-    // A callback to call when we're completely done.
-    var done: (() -> ()) = {}
-    
-    // A callback to invoke in the event of failure.
-    var fail: (() -> ()) = {}
-    
-    // A simple way to track rejection.
-    var error: String? = nil
-    
-    // Class ("static") method to return a new promise.
-    public class func defer() -> Promise<T> {
-        return Promise<T>()
-    }
+    private var _thens: [((result:T?) -> ())] = []
+    private var _fails: [(error:String) -> Void] = []
     
     // Resolve method.
     //
@@ -66,33 +47,31 @@ public class Promise<T:Any> : Finishable {
     //
     // Invokes fail callback in case of rejection (and swiftly abandons ship).
     public func resolve(result:T? = nil) -> Void {
-        assert(_status == .Unresolved, "Promise has already been resolved or rejected.")
+        assert(_status == .Pending, "Promise has already been settled.")
         
         _result = result
         
-        _status = .Resolving
-        
-        for f in self.pending {
-            if(_status == .Failed){break} //EXPL: If it's rejected, halt callbacks.
+        for then in _thens {
+            if(_status == .Rejected){break} //EXPL: If it's rejected, halt callbacks.
             
-            f(result?)
+            then(result:result?)
         }
         
-        _status = .Resolved
-        
-        done()
+        _status = .Fulfilled
     }
     
     // Reject method.
     //
     // Sets rejection flag to true to halt execution of subsequent callbacks.
     public func reject(error:String) -> () {
-        assert(_status == .Unresolved || _status == .Resolving, "Promise has already been resolved or rejected.")
+        assert(_status == .Pending, "Promise has already been settled.")
         
-        _status = .Failed
-        self.error = error
+        _status = .Rejected
+        _error = error
         
-        self.fail()
+        for fail in _fails {
+            fail(error:_error)
+        }
     }
     
     // Then method.
@@ -100,9 +79,9 @@ public class Promise<T:Any> : Finishable {
     // This lets us chain callbacks together; it accepts one parameter, a Void -> Void
     // callback - can either be a function itself, or a Swift closure.
     public func then(callback: ((T?) -> Void)) -> Promise {
-        if(_status == .Unresolved){
-            self.pending.append(callback)
-        }else if(_status == .Resolved || _status == .Resolving){
+        _thens.append(callback)
+        
+        if(_status == .Fulfilled){
             //EXPL: call any thens set *after* the promise is resolved.
             callback(_result)
         }
@@ -110,53 +89,31 @@ public class Promise<T:Any> : Finishable {
         return self
     }
     
-//    // Then method override.
-//    //
-//    // This also lets us chain callbacks together; it accepts one parameter,
-//    // but unlike the previous implementation of then(), it accepts a Promise -> Void
-//    // callback (which can either be a function itself, or a Swift closure).
-//    //
-//    // This method then wraps that callback in a Void -> Void callback that
-//    // passes in this Promise object when invoking the callback() function.
-//    //
-//    // This allows users of our Promise library to have access to the Promise object,
-//    // so that they can reject a Promise within their then() clauses. Not the cleanest
-//    // way, but hey, this whole thing is a proof of concept, right? :)
-//    func then(callback: ((promise: Promise) -> ())) -> Promise {
-//        func thenWrapper() -> () {
-//            callback(promise: self)
-//        }
-//        self.pending.append(thenWrapper)
-//        return self
-//    }
-    
     // Fail method.
     //
-    // This lets us chain a fail() method at the end of a set of then() clauses.
-    //
-    // Note that unlike then(), this does not return a Promise object. It returns
-    // a "Finishable" object, which locks users down to only being able to specify
-    // a done() clause after a fail() clause. This is to prevent users from being
-    // able to do something like this:
-    //
-    // promise.then({}).fail({}).then({}).fail({})
-    //
-    public func fail(fail: (() -> ())) -> Finishable {
-        self.fail = fail
+    // This lets us chain fail() methods
+    public func fail(fail: (error:String) -> Void) -> Promise {
+        _fails.append(fail)
         
         //EXPL: if the promise has already failed, make the call anyway.
-        if(_status == .Failed){
-            fail()
+        if(_status == .Rejected){
+            fail(error:_error)
         }
         
         return self
     }
     
-    // Done method.
-    //
-    // This lets us specify a done() callback to be invoked at the end of a set
-    // of then() clauses (provided the promise hasn't been rejected).
-    public func done(done: (() -> ())) -> () {
-        self.done = done
+    public func map<R:Any>(mapFunction:(T?) -> (R?)) -> Promise<R>{
+        var mappedPromise:Promise<R> = Promise<R>()
+        
+        self.then { (result) -> Void in
+            let mappedResult = mapFunction(result)
+            
+            mappedPromise.resolve(result: mappedResult)
+        }.fail { (error) -> Void in
+            mappedPromise.reject(error)
+        }
+        
+        return mappedPromise
     }
 }
