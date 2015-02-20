@@ -34,10 +34,10 @@ internal enum Status{
 
 public class Promise<T:Any> {
     private var _status:Status = .Pending
-    private var _result:T? = nil
+    private var _result:T?
     private var _error: String = ""
     
-    private var _thens: [((result:T?) -> ())] = []
+    private var _thens: [((result:T) -> ())] = []
     private var _fails: [(error:String) -> Void] = []
     
     public init(){
@@ -50,7 +50,7 @@ public class Promise<T:Any> {
     // invoking each in sequence.
     //
     // Invokes fail callback in case of rejection (and swiftly abandons ship).
-    public func resolve(result:T? = nil) -> Void {
+    public func resolve(result:T) -> Void {
         assert(_status == .Pending, "Promise has already been settled.")
         
         _result = result
@@ -58,7 +58,7 @@ public class Promise<T:Any> {
         for then in _thens {
             if(_status == .Rejected){break} //EXPL: If it's rejected, halt callbacks.
             
-            then(result:result?)
+            then(result:result)
         }
         
         _status = .Fulfilled
@@ -82,12 +82,14 @@ public class Promise<T:Any> {
     //
     // This lets us chain callbacks together; it accepts one parameter, a Void -> Void
     // callback - can either be a function itself, or a Swift closure.
-    public func then(callback: ((T?) -> Void)) -> Promise {
+    public func then(callback: ((T) -> Void)) -> Promise {
         _thens.append(callback)
         
         if(_status == .Fulfilled){
+            assert(_result != nil, "Internal Error: the result was set to nil after the promise was fulfilled.")
+            
             //EXPL: call any thens set *after* the promise is resolved.
-            callback(_result)
+            callback(_result!)
         }
         
         return self
@@ -107,13 +109,13 @@ public class Promise<T:Any> {
         return self
     }
     
-    public func map<R:Any>(mapFunction:(T?) -> (R?)) -> Promise<R>{
+    public func map<R:Any>(mapFunction:(T) -> (R)) -> Promise<R>{
         var mappedPromise:Promise<R> = Promise<R>()
         
         self.then { (result) -> Void in
             let mappedResult = mapFunction(result)
             
-            mappedPromise.resolve(result: mappedResult)
+            mappedPromise.resolve(mappedResult)
         }.fail { (error) -> Void in
             mappedPromise.reject(error)
         }
