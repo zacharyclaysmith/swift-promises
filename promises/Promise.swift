@@ -44,6 +44,13 @@ public class Promise<T:Any> {
         
     }
     
+    //SUMMARY: Convenience init to auto-resolve a Promise to a result. This is useful when you already have a result but a function expects a promise.
+    public convenience init(result:T){
+        self.init()
+        
+        resolve(result)
+    }
+    
     // Resolve method.
     //
     // Returns a resolve function that loops through pending callbacks,
