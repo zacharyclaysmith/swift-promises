@@ -41,30 +41,15 @@ public class Promise<T:Any> {
     private var _thens: [((result:T) -> ())] = []
     private var _fails: [(error:String) -> Void] = []
     
-    internal init(){
+    public init(){
         
-    }
-    
-    //SUMMARY: initialize promise with an execution function that will be called when execute() is called. This method should handle resolving/rejecting of the promise.
-    public init(execution:() -> T, autoExecute:Bool = true){
-        _execution = execution
-        
-        if(autoExecute){
-            self.execute()
-        }
     }
     
     //SUMMARY: Convenience init to auto-resolve a Promise to a result. This is useful when you already have a result but a function expects a promise.
-    public convenience init(result:T, autoExecute:Bool = true){
-        self.init(execution:{() -> T in return result}, autoExecute:autoExecute)
-    }
-    
-    public func execute(useBackgroundThread:Bool = false) -> Promise<T>{
-        assert(_execution != nil, "No execution method set.")
+    public convenience init(result:T){
+        self.init()
         
-        _execution!()
-        
-        return self
+        self.resolve(result)
     }
     
     // Resolve method.
