@@ -33,6 +33,7 @@ internal enum Status{
 }
 
 public class Promise<T:Any> {
+    private var _execution:(() -> T)?
     private var _status:Status = .Pending
     private var _result:T?
     private var _error: String = ""
@@ -40,15 +41,30 @@ public class Promise<T:Any> {
     private var _thens: [((result:T) -> ())] = []
     private var _fails: [(error:String) -> Void] = []
     
-    public init(){
+    internal init(){
         
     }
     
-    //SUMMARY: Convenience init to auto-resolve a Promise to a result. This is useful when you already have a result but a function expects a promise.
-    public convenience init(result:T){
-        self.init()
+    //SUMMARY: initialize promise with an execution function that will be called when execute() is called. This method should handle resolving/rejecting of the promise.
+    public init(execution:() -> T, autoExecute:Bool = true){
+        _execution = execution
         
-        resolve(result)
+        if(autoExecute){
+            self.execute()
+        }
+    }
+    
+    //SUMMARY: Convenience init to auto-resolve a Promise to a result. This is useful when you already have a result but a function expects a promise.
+    public convenience init(result:T, autoExecute:Bool = true){
+        self.init(execution:{() -> T in return result}, autoExecute:autoExecute)
+    }
+    
+    public func execute(useBackgroundThread:Bool = false) -> Promise<T>{
+        assert(_execution != nil, "No execution method set.")
+        
+        _execution!()
+        
+        return self
     }
     
     // Resolve method.
@@ -56,7 +72,7 @@ public class Promise<T:Any> {
     // Returns a resolve function that loops through pending callbacks,
     // invoking each in sequence.
     //
-    // Invokes fail callback in case of rejection (and swiftly abandons ship).
+    // if promise is rejected, callbacks are halted.
     public func resolve(result:T) -> Void {
         assert(_status == .Pending, "Promise has already been settled.")
         
